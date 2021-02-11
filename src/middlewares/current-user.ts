@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import type {} from "cookie-session";
+
 import jwt from "jsonwebtoken";
 
 interface UserPayload {
