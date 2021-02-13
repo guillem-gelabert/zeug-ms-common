@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.errorHandler = void 0;
-var errors_1 = require("../errors");
-var errorHandler = function (err, _, res) {
+const errors_1 = require("../errors");
+const errorHandler = (err, _, res) => {
     if (err instanceof errors_1.CustomError) {
         res.status(err.statusCode).send({ errors: err.serializeErrors() });
         return;

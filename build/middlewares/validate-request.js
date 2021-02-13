@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validateRequest = void 0;
-var express_validator_1 = require("express-validator");
-var errors_1 = require("../errors");
-var validateRequest = function (req, _, next) {
-    var errors = express_validator_1.validationResult(req);
+const express_validator_1 = require("express-validator");
+const errors_1 = require("../errors");
+const validateRequest = (req, _, next) => {
+    const errors = express_validator_1.validationResult(req);
     if (!errors.isEmpty()) {
         throw new errors_1.RequestValidationError(errors.array());
     }
