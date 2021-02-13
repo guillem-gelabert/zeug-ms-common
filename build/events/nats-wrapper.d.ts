@@ -4,4 +4,3 @@ export declare class NatsWrapper {
     get client(): nats.Stan;
     connect(clusterID: string, clientID: string, url: string): Promise<void>;
 }
-export declare const natsWrapper: NatsWrapper;
